@@ -37,5 +37,4 @@ steps:
 ## Publish the zip file
 - task: PublishBuildArtifacts@1
   inputs:
-    artifactName: 'react-standalone'
     pathtoPublish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
