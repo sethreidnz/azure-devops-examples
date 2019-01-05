@@ -9,20 +9,19 @@ pool:
 variables:
   projectFolder: 'src/react-standalone'
   buildConfiguration: 'Release'
-  clientProjectFolder: 'src/client'
 
 # define the steps of the build
 steps:
 
 ## Run the npm install/build
 - script: |
-    pushd $(clientProjectFolder) && npm install && popd
-    pushd $(clientProjectFolder) && npm run build && popd
+    pushd $(projectFolder) && npm install && popd
+    pushd $(projectFolder) && npm run build && popd
 
 ## Copy the client to the server wwwroot
 - task: CopyFiles@2
   inputs:
-    sourceFolder: '$(clientProjectFolder)/build' 
+    sourceFolder: '$(projectFolder)/build' 
     contents: '**/*' 
     targetFolder: '$(Build.ArtifactStagingDirectory)'
     cleanTargetFolder: true
