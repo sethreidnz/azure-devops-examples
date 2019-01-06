@@ -8,7 +8,7 @@ pool:
 # define variables to use during the build
 variables:
   projectFolder: 'src/vue'
-  buildOutputFolder: 'src/angular/dist'
+  buildOutputFolder: 'src/vue/dist'
 
 # define the steps of the build
 steps:
