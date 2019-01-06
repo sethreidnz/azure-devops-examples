@@ -7,7 +7,7 @@ pool:
 
 # define variables to use during the build
 variables:
-  projectFolder: 'src/vue'
+  projectFile: 'src/dotnet/AzureDevopsExamples.React.csproj'
   buildConfiguration: 'Release'
 
 # define the steps of the build
@@ -15,8 +15,8 @@ steps:
 
 ## Run the dotnet build/publish
 - script: |
-    dotnet build $(projectFolder) --configuration $(buildConfiguration)
-    dotnet publish $(projectFolder) --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)
+    dotnet build $(projectFile) --configuration $(buildConfiguration)
+    dotnet publish $(projectFile) --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)
 
 ## Copy the client to the staging directory
 - task: CopyFiles@2
