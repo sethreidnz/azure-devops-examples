@@ -1,7 +1,7 @@
 # Azure Devops Examples
 
 This repository is designed to go with the various blogs on my blog [sethreid.co.nz](https://sethreid.co.nz) that show 
-how to create builds using Azure Devop's new YAML based build configurations.
+how to create builds using [Azure Devop's](https://azure.microsoft.com/en-us/services/devops/pipelines/) new YAML based build pipeline configurations.
 
 Included are:
 
