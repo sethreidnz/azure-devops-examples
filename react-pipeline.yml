@@ -18,7 +18,7 @@ steps:
     pushd $(projectFolder) && npm install && popd
     pushd $(projectFolder) && npm run build && popd
 
-## Copy the client to the server wwwroot
+## Copy the client to the staging directory
 - task: CopyFiles@2
   inputs:
     sourceFolder: '$(buildOutputFolder)' 
