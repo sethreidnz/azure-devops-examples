@@ -8,7 +8,7 @@ pool:
 # define variables to use during the build
 variables:
   projectFolder: 'src/angular'
-  buildOutputFolder: 'src/angular/dist'
+  buildOutputFolder: 'src/angular/dist/angular'
 
 # define the steps of the build
 steps:
