@@ -7,8 +7,8 @@ pool:
 
 # define variables to use during the build
 variables:
-  projectFolder: 'src/react-standalone'
-  buildConfiguration: 'Release'
+  projectFolder: 'src/react'
+  buildOutputFolder: 'src/react/build'
 
 # define the steps of the build
 steps:
@@ -21,7 +21,7 @@ steps:
 ## Copy the client to the server wwwroot
 - task: CopyFiles@2
   inputs:
-    sourceFolder: '$(projectFolder)/build' 
+    sourceFolder: '$(buildOutputFolder)' 
     contents: '**/*' 
     targetFolder: '$(Build.ArtifactStagingDirectory)'
     cleanTargetFolder: true
