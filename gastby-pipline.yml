@@ -8,7 +8,7 @@ pool:
 # define variables to use during the build
 variables:
   projectFolder: 'src/gatsby'
-  buildOutputFolder: 'src/react/gatsby'
+  buildOutputFolder: 'src/gatsby/public'
 
 # define the steps of the build
 steps:
