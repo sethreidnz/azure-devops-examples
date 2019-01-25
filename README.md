@@ -12,7 +12,7 @@ Included are:
 
 ## What is in the repository?
 
-The repo contains base projects created with each framework's command line project generation tools and then a YAML file for each of them. They are all well documented on what is happening and can be found here:
+The repository contains base projects created with each framework's command line project generation tools and then a YAML file for each of them. They are all well documented on what is happening and can be found here:
 
 - React - [react-pipeline.yml](./react-pipeline.yml)
 - Angular - [angular-pipeline.yml](./angular-pipeline.yml)
