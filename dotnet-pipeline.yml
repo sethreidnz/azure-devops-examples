@@ -10,6 +10,13 @@ variables:
   projectFile: 'src/dotnet/AzureDevopsExamples.React.csproj'
   buildConfiguration: 'Release'
 
+# specific path build
+trigger:
+  paths:
+    include:
+    - src/dotnet/*
+    - dotnet-pipeline.yml
+
 # define the steps of the build
 steps:
 
