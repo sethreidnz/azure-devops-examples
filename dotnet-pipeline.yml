@@ -25,14 +25,6 @@ steps:
     dotnet build $(projectFile) --configuration $(buildConfiguration)
     dotnet publish $(projectFile) --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)
 
-## Copy the client to the staging directory
-- task: CopyFiles@2
-  inputs:
-    sourceFolder: '$(buildOutputFolder)' 
-    contents: '**/*' 
-    targetFolder: '$(Build.ArtifactStagingDirectory)'
-    cleanTargetFolder: true
-
 ## Archive the files into a zip file for publishing
 - task: ArchiveFiles@2
   inputs:
